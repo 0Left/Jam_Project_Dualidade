@@ -9,7 +9,6 @@ de passar um desafio moderado ao player.
 # To-Do
 * * Focus on this now (Mov)|>
 - Player + fairy *
-    - Mov with scalar speed *
     - Attack with Scalar Range and Damage
         - The attacks is a Fairy Movment
     - Jump *
@@ -40,5 +39,8 @@ de passar um desafio moderado ao player.
         - DownDash that replaces Fairy-Attack button
 
 
+# Done
+- Player + fairy 
+    - Mov with scalar speed
 
 # To think
