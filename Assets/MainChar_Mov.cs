@@ -20,19 +20,22 @@ public class MainChar_Mov : MonoBehaviour
             StopAndChange = false;
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        Debug.Log(rb.velocity.x);
-        if(canJump){
-            rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
-        }else{
-            rb.velocity += new Vector2(move.x * (speed / 100) *Time.deltaTime, 0);
+        if(rb.velocity.x > -101 && rb.velocity.x < 101){
+            if(canJump){
+                rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
+            }else{
+                rb.velocity += new Vector2(move.x * (speed / 100) *Time.deltaTime, 0);
+            }
         }
     }
     private bool GoingToRight;
     private bool StopAndChange;
     public bool canJump = true;
+    public bool canDash = true;
     public float jumpVelocity = 300;
     public void isOnGround(){
         canJump = true;
+        canDash = true;
         return;
     }
     void Update()
@@ -50,6 +53,16 @@ public class MainChar_Mov : MonoBehaviour
         if (Input.GetKeyDown("space") && canJump){
             canJump = false;
             rb.AddForce(Vector2.up*jumpVelocity, ForceMode2D.Impulse);
+        }
+        if (Input.GetKeyDown("z") && canDash){
+            Vector2 SideToGo;
+            canDash = false;
+            if(GoingToRight){
+                SideToGo = Vector2.right;
+            }else{
+                SideToGo = Vector2.left;
+            }
+            rb.AddForce(SideToGo*jumpVelocity*2, ForceMode2D.Impulse);
         }
     }
 }
