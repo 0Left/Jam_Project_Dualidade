@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundRec : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         if(other.CompareTag("Ground")){
             gameObject.transform.parent.transform.gameObject.GetComponent<MainChar_Mov>().isOnGround();
         }

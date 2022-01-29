@@ -20,13 +20,11 @@ public class MainChar_Mov : MonoBehaviour
             StopAndChange = false;
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        if(rb.velocity.x > -101 && rb.velocity.x < 101){
-            Debug.Log(rb.velocity.x);
-            if(canJump){
-                rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
-            }else{
-                rb.velocity += new Vector2(move.x * (speed / 100) *Time.deltaTime, 0);
-            }
+        Debug.Log(rb.velocity.x);
+        if(canJump){
+            rb.velocity = new Vector2(move.x * speed * Time.deltaTime, rb.velocity.y);
+        }else{
+            rb.velocity += new Vector2(move.x * (speed / 100) *Time.deltaTime, 0);
         }
     }
     private bool GoingToRight;
