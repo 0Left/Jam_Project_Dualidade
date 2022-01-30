@@ -9,14 +9,26 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 # To-Do
 * * Focus on this now (Mov)|>
        
+- AutoSave / Load 
+- Tela inicial
+- Select Stage?
+    - pode ser "new-game" ou "continue" no começo, ai evita ter essa, boa, vou fazer assim.
+- Pause/Restart/Quit
+- Creditos
 
-- Map
-    - Map Lvl Design
-        - Espinhozin
-        
-        - Save / Load / Checkpoint
-    - Zone triggers to make text interactions
+* * extras
+    - Musiquinha/Efeitos Especiais
+        - Win
+        - Lose/Death
+        - Jump
+        - Change Gravity - esse tem que ser top
+        - Menu Music
+        - Lvl Music
 
+    - Lvl 4
+    - Lvl 5
+
+    - Efeitinho de feedback de tem dash (\Pink Star\11-Attack Effect - JOga um roxin fica top)
 
 # Done
 - Player

@@ -5207,6 +5207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c27f6b20c375e4fbaba30eeb27055f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: Lvl_2
 --- !u!249 &1609815810
 AreaEffector2D:
   serializedVersion: 2

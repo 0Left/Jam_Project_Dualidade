@@ -74,6 +74,7 @@ public class MainChar_Mov : MonoBehaviour
         isBackOnGround = true;
         canJump = true;
         canDash = true;
+        //particulinha.SetActive(true);
         if(toOtherSide){
             toOtherSide = false;
         }
@@ -82,8 +83,8 @@ public class MainChar_Mov : MonoBehaviour
     public void Die(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void NextLvl(){
-        Debug.Log("Passou, boa");
+    public bool isMeBackOnGround(){
+        return isBackOnGround;
     }
     void Update()
     {
@@ -127,22 +128,27 @@ public class MainChar_Mov : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.gravityScale = (rb.gravityScale * -1);
             GameObject.Find("GlobalGravityChange").GetComponent<GravityMapController>().ChangeGravityOfBoxes();
+            if(!GetComponent<SpriteRenderer>().flipX){GetComponent<SpriteRenderer>().flipX = true;}else{GetComponent<SpriteRenderer>().flipX = false;}
             toOtherSide = true;
             canJump = false;
         }
     }
+    //public GameObject particulinha;
     private IEnumerator dashRoutine(Vector2 SideToGo){
         isDashing = true;
         rb.velocity = new Vector2(rb.velocity.x,0f);
         rb.AddForce(SideToGo*dashDistance*2, ForceMode2D.Impulse);
         float gravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.2f);
+        //particulinha.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
         isDashing = false;
         rb.gravityScale = gravity;
         yield return new WaitForSeconds(0.3f);
         if(isBackOnGround){
             canDash = true;
+            //particulinha.SetActive(true);
         }
 
     }
