@@ -87,14 +87,18 @@ public class MainChar_Mov : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetAxisRaw("Horizontal") < 0 && GoingToRight){
-            GoingToRight = false;
-            GetComponent<SpriteRenderer>().flipX = true;
-            StopAndChange = true;
-        }else if (Input.GetAxisRaw("Horizontal") > 0 && !GoingToRight){
-            GoingToRight = true;
-            GetComponent<SpriteRenderer>().flipX = false;
-            StopAndChange = true;
+        if(Input.GetAxisRaw("Horizontal") < 0 ){
+            if(isGravityDown){GetComponent<SpriteRenderer>().flipX = true;}else{GetComponent<SpriteRenderer>().flipX = false;}
+            if(GoingToRight){
+                GoingToRight = false;
+                StopAndChange = true;
+            }
+        }else if (Input.GetAxisRaw("Horizontal") > 0 ){
+            if(isGravityDown){GetComponent<SpriteRenderer>().flipX = false;}else{GetComponent<SpriteRenderer>().flipX = true;}
+            if(!GoingToRight){
+                GoingToRight = true;
+                StopAndChange = true;
+            }
         }
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (Input.GetKeyDown("space") && canJump){
