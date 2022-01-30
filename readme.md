@@ -8,13 +8,17 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 - 3 Lvl
 # To-Do
 * * Focus on this now (Mov)|>
-       
-- AutoSave / Load 
 - Tela inicial
+ - Imagemzinha
+    - De fundo uma luazinha, Maybe Rodandinho
+    - Paleta azul/Cinza
+    - Um butãozinho se der  
 - Select Stage?
     - pode ser "new-game" ou "continue" no começo, ai evita ter essa, boa, vou fazer assim.
 - Pause/Restart/Quit
 - Creditos
+       
+- AutoSave / Load 
 
 * * extras
     - Musiquinha/Efeitos Especiais
@@ -45,3 +49,17 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 - "Bem vindo agente 84, você foi bem sucedido na sua missão de capturar informações nos depósitos mentais, retorne imediatamente a base de controle para aguardar novas ordens"
 [objetivo]
 - Fugir dos depósitos mentais
+
+
+
+# Credits
+* Programmer:
+    - 0Left - github.com/0Left
+* Arts
+    - Menu Background - 0Left
+    - Base Char - https://0x72.itch.io/16x16-industrial-tileset
+    - Props - https://0x72.itch.io/16x16-industrial-tileset
+    - Tileset - https://grinlane.itch.io/clean-dungeons-tileset
+    - Buttons - https://ankousse26.itch.io/free-pixel-art-buttons
+* Fonts:
+    - Alagard - https://www.dafont.com/pt/alagard.font
