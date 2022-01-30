@@ -88,19 +88,14 @@ public class MainChar_Mov : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetAxisRaw("Horizontal") == 1f || Input.GetAxisRaw("Horizontal") == -1f){
-            move = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
-        }else{
-            move = new Vector2(0,0);
-        }
-        Debug.Log(move);
-        if(Input.GetAxisRaw("Horizontal") < 0 ){
+        move = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+        if(Input.GetAxisRaw("Horizontal") < 0f ){
             if(isGravityDown){GetComponent<SpriteRenderer>().flipX = true;}else{GetComponent<SpriteRenderer>().flipX = false;}
             if(GoingToRight){
                 GoingToRight = false;
                 StopAndChange = true;
             }
-        }else if (Input.GetAxisRaw("Horizontal") > 0 ){
+        }else if (Input.GetAxisRaw("Horizontal") > 0f ){
             if(isGravityDown){GetComponent<SpriteRenderer>().flipX = false;}else{GetComponent<SpriteRenderer>().flipX = true;}
             if(!GoingToRight){
                 GoingToRight = true;
@@ -116,7 +111,7 @@ public class MainChar_Mov : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown("z") && canDash){
+        if (Input.GetKeyDown("s") && canDash){
             Vector2 SideToGo;
             canDash = false;
             if(GoingToRight){
@@ -128,7 +123,7 @@ public class MainChar_Mov : MonoBehaviour
             //rb.AddForce(SideToGo*jumpVelocity*2, ForceMode2D.Impulse);
         }
 
-        if (Input.GetKeyDown("x") && canChangeGravity){
+        if (Input.GetKeyDown("a") && canChangeGravity){
             canChangeGravity = false;
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.gravityScale = (rb.gravityScale * -1);
