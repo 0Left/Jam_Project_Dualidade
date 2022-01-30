@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject CreditsObject;
     void Start()
     {
-        
+        HideCredits();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void HideCredits(){
+        CreditsObject.SetActive(false);
+    }
+    public void ShowCredits(){
+        CreditsObject.SetActive(true);
+    }
+    public void StartANewGame(){
+        SceneManager.LoadScene("Lvl_1");
+    }
+    public void QuitGame(){
+        Application.Quit();
     }
 }
