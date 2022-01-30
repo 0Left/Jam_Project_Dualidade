@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 public class MainChar_Mov : MonoBehaviour
 {
@@ -78,7 +80,10 @@ public class MainChar_Mov : MonoBehaviour
         return;
     }
     public void Die(){
-        GetComponent<SpriteRenderer>().enabled = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void NextLvl(){
+        Debug.Log("Passou, boa");
     }
     void Update()
     {
