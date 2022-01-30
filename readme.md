@@ -13,10 +13,7 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 - Map
     - Map Lvl Design
         - Espinhozin
-        - Props that fly
-        - Mov Plataforms
-            - X
-            - Y
+        
         - Save / Load / Checkpoint
     - Zone triggers to make text interactions
 
@@ -29,7 +26,8 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
         - X Dash mov
     - Gravity Change
 - Caixinha que da pra empurrar
-
+    - AutoMov Plataforms
+        - X
 # To think
 [comecin]
 - "Bem vindo agente 84, você foi bem sucedido na sua missão de capturar informações nos depósitos mentais, retorne imediatamente a base de controle para aguardar novas ordens"

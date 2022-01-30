@@ -17,7 +17,6 @@ public class MoveSideToSidePlataform : MonoBehaviour
 
     IEnumerator RepeatMe(){
         moveSpeed = moveSpeed * -1;
-        Debug.Log("DoME" + moveSpeed);
         yield return new WaitForSeconds(TimeToGoSideBySide);
         StartCoroutine(RepeatMe());
         
