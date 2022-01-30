@@ -8,14 +8,11 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 - 3 Lvl
 # To-Do
 * * Focus on this now (Mov)|>
-- Player 
-    - Dash *
-        - X Dash mov
-        - Y Dash Attack (end only)
+       
 
 - Map
     - Map Lvl Design
-        - Spawn Points
+        - Espinhozin
         - Props that fly
         - Mov Plataforms
             - X
@@ -28,6 +25,10 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
 - Player
     - Mov with scalar speed
     - Jump
+    - Dash
+        - X Dash mov
+    - Gravity Change
+- Caixinha que da pra empurrar
 
 # To think
 [comecin]

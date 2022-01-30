@@ -76,6 +76,9 @@ public class MainChar_Mov : MonoBehaviour
         }
         return;
     }
+    public void Die(){
+        GetComponent<SpriteRenderer>().enabled = false;
+    }
     void Update()
     {
         if(Input.GetAxisRaw("Horizontal") < 0 && GoingToRight){
@@ -110,6 +113,7 @@ public class MainChar_Mov : MonoBehaviour
         if (Input.GetKeyDown("x") && canChangeGravity){
             canChangeGravity = false;
             rb.gravityScale = (rb.gravityScale * -1);
+            GameObject.Find("GlobalGravityChange").GetComponent<GravityMapController>().ChangeGravityOfBoxes();
             toOtherSide = true;
             canJump = false;
         }
