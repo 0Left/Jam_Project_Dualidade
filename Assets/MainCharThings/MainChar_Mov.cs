@@ -88,6 +88,12 @@ public class MainChar_Mov : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetAxisRaw("Horizontal") == 1f || Input.GetAxisRaw("Horizontal") == -1f){
+            move = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+        }else{
+            move = new Vector2(0,0);
+        }
+        Debug.Log(move);
         if(Input.GetAxisRaw("Horizontal") < 0 ){
             if(isGravityDown){GetComponent<SpriteRenderer>().flipX = true;}else{GetComponent<SpriteRenderer>().flipX = false;}
             if(GoingToRight){
@@ -101,7 +107,6 @@ public class MainChar_Mov : MonoBehaviour
                 StopAndChange = true;
             }
         }
-        move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (Input.GetKeyDown("space") && canJump){
             canJump = false;
             if(isGravityDown){
