@@ -1,5 +1,5 @@
 # Name
-Gravity is not 0
+Gravity is not 0 
 # Ideia
 Projeto ficou mt grande, vamo troca.
 Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases devem ser okay, todas de puzzle
@@ -30,3 +30,7 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
     - Jump
 
 # To think
+[comecin]
+- "Bem vindo agente 84, você foi bem sucedido na sua missão de capturar informações nos depósitos mentais, retorne imediatamente a base de controle para aguardar novas ordens"
+[objetivo]
+- Fugir dos depósitos mentais
