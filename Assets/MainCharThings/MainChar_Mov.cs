@@ -143,6 +143,7 @@ public class MainChar_Mov : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         //particulinha.SetActive(false);
         yield return new WaitForSeconds(0.2f);
+        rb.velocity = new Vector2(0f,0f);
         isDashing = false;
         rb.gravityScale = gravity;
         yield return new WaitForSeconds(0.3f);
