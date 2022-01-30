@@ -11,6 +11,7 @@ public class GroundRec : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("it's ME");
         //if(other.CompareTag("Ground") || other.CompareTag("Box")){
             gameObject.transform.parent.transform.gameObject.GetComponent<MainChar_Mov>().isOnGround();
         //}

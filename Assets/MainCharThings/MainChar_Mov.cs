@@ -9,7 +9,7 @@ public class MainChar_Mov : MonoBehaviour
     public float speed = 3000; 
     Vector2 move;
     Rigidbody2D rb;
-    private float fallMultiplier = 3.5f;
+    private float fallMultiplier = 2.5f;
     private bool isGravityDown;
 
     private bool canChangeGravity = true;
@@ -48,7 +48,7 @@ public class MainChar_Mov : MonoBehaviour
                     rb.velocity += new Vector2(move.x * (speed / 50) *Time.deltaTime, 0);
                 }
             }
-            if(!toOtherSide){
+            if(!toOtherSide && !canJump){
                 if (rb.velocity.y < 0 && isGravityDown) {
                     rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
                 }
@@ -109,6 +109,7 @@ public class MainChar_Mov : MonoBehaviour
                 rb.AddForce(Vector2.down*jumpVelocity, ForceMode2D.Impulse);
             }
         }
+        
         if (Input.GetKeyDown("z") && canDash){
             Vector2 SideToGo;
             canDash = false;
@@ -120,8 +121,10 @@ public class MainChar_Mov : MonoBehaviour
             StartCoroutine(dashRoutine(SideToGo));
             //rb.AddForce(SideToGo*jumpVelocity*2, ForceMode2D.Impulse);
         }
+
         if (Input.GetKeyDown("x") && canChangeGravity){
             canChangeGravity = false;
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.gravityScale = (rb.gravityScale * -1);
             GameObject.Find("GlobalGravityChange").GetComponent<GravityMapController>().ChangeGravityOfBoxes();
             toOtherSide = true;
@@ -131,7 +134,7 @@ public class MainChar_Mov : MonoBehaviour
     private IEnumerator dashRoutine(Vector2 SideToGo){
         isDashing = true;
         rb.velocity = new Vector2(rb.velocity.x,0f);
-        rb.AddForce(SideToGo*jumpVelocity*2, ForceMode2D.Impulse);
+        rb.AddForce(SideToGo*dashDistance*2, ForceMode2D.Impulse);
         float gravity = rb.gravityScale;
         rb.gravityScale = 0f;
         yield return new WaitForSeconds(0.4f);
