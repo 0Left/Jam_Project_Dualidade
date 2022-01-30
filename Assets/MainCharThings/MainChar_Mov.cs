@@ -64,6 +64,7 @@ public class MainChar_Mov : MonoBehaviour
         
     }
     public void notOnGround(){
+        transform.parent = null;
         isBackOnGround = false;
     }
     public void isOnGround(){
