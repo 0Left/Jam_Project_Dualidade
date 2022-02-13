@@ -1,11 +1,18 @@
 # Name
  Escape Gravity
 # Ideia
-Projeto ficou mt grande, vamo troca.
-Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases devem ser okay, todas de puzzle
+    - Action Game
+        - 5~6 lvls
+        - 1 boss
+        - 3 enemies
+        - 1 mini boss
+    - mini shooter
 # Escopo
 - 1 Player
-- 3 Lvl
+- 5 Lvls
+- 3 enemies
+- 1 mini boss (extra)
+- 1 boss
 # To-Do
 * * Focus on this now (Mov)|>
 
@@ -20,10 +27,12 @@ Agora será um puzzle que você controla a gravidade para passar, 2, 3 fases dev
         - Change Gravity - esse tem que ser top
         - Menu Music
         - Lvl Music
-
-    - Lvl 4
+    
+    - Wall Jump 
+    - Reset Dash 
+    - Da dash sem parar e acaba virando sem parar
     - Lvl 5
-    - + lvl's
+    - + lvl's (3)
     - Efeitinho de feedback de tem dash (\Pink Star\11-Attack Effect - JOga um roxin fica top)
 
 # Done

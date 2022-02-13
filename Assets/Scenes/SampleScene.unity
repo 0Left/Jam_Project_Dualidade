@@ -1937,7 +1937,7 @@ MonoBehaviour:
   canJump: 1
   canDash: 1
   jumpVelocity: 600
-  dashDistance: 15
+  dashDistance: 600
 --- !u!50 &888722575
 Rigidbody2D:
   serializedVersion: 4
@@ -2331,6 +2331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c27f6b20c375e4fbaba30eeb27055f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: 
 --- !u!1 &1470368040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,7 +2651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819440504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.236355, y: 57.8, z: 0}
+  m_LocalPosition: {x: 49.236355, y: 111.6, z: 0}
   m_LocalScale: {x: 2.8335936, y: 0.725, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
